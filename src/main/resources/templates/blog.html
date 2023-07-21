@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="layouts/form" >
+
+<body>
+<div layout:fragment="content">
+  <section class="testimonials py-5">
+    <div class="article">
+      <div class="">
+        <div class="">
+          <h2 class="h1 font-weight-bold text-danger p-3 p-lg-5 pb-1 pt-1">
+            Should I use a broker to sell my business? <br />
+            <i class="font-italic text-dark font-weight-light h3">
+              --- A review of the pros and cons.
+            </i>
+            <span class="text-danger h6 pt-0 pb-0 p-sm-3">
+                By Dylan Gans
+                <span class="text-dark">--- March 14, 2023 --- </span>
+                <span class="text-success">11 Min Read</span>
+              </span>
+          </h2>
+          <div class="row container-fluid">
+            <div class="col-md-4">
+              <img th:src="@{images/thinker.png}" alt="" class="img-fluid" />
+            </div>
+            <div class="col-md-7">
+              <div class="text-dark pt-3 p-3 pl-md-5 pr-md-5 pb-1 pt-1">
+                <p class="font-weight-normal">
+                  Over the past year, I’ve talked to a lot of owners who have
+                  struggled with the decision of whether or not to work with a
+                  broker. And if they are committed to working with a broker,
+                  they wonder how they can save on fees. That inspired us to
+                  write this guide for business owners that are considering
+                  using a broker to sell their business. Maybe you’re looking
+                  for a change, planning to retire, or need some extra cash.
+                  There are infinite reasons to want to sell your small
+                  business, <b>but the goal is often the same: </b>
+                  <i class="text-primary"
+                  >To sell your business as quickly as possible, for as much
+                    money as possible.
+                  </i>
+                </p>
+                <p class="text-center my-3">
+                  <button class="btn btn-danger m-1 btn-lg" id="showstory">
+                    Read More
+                  </button>
+                  <a class="btn btn-primary m-1 btn-lg" th:href="@{login}"
+                  >Get Started</a
+                  >
+                </p>
+                <p
+                        id="story"
+                        style="display: none"
+                        class="p-3 p-lg-1 pb-1 pt-1">
+                  However, selling a small business can be a long, complex,
+                  and even expensive process. It can take an average of 6-9
+                  months to sell a business, and many don’t end up selling.
+                  You also have a lot on the line — 80-90% of business owners’
+                  net worth is tied up in their business. One key question you
+                  may be asking yourself before starting the process is if you
+                  should hire a broker or go at it alone. While the answer
+                  depends a lot on your personal situation, this guide will
+                  walk you through the pros and cons of whether you should use
+                  a business broker. Who are business brokers? Before we get
+                  into the benefits and drawbacks of using a business broker,
+                  let’s break down who a business broker is and what they
+                  actually do. Basically, a business broker’s main role is to
+                  help you sell your business at the right price. They provide
+                  support and various services for the seller, including:
+                  Helping you gather financial information and documents
+                  Helping you understand the valuation of your business
+                  Marketing your small business and finding a buyer Assisting
+                  in contract negotiations and handling all buyer inquiries
+                  Managing the due diligence process for you Facilitating the
+                  closing process Handling any outstanding issues that may
+                  come up throughout the process Different business brokers
+                  have varying fee structures. Typically fees include
+                  valuation fees, marketing fees, monthly retainers, and
+                  commission. Most business brokers will charge a success fee,
+                  typically between 5%-15% of the total sale price. Others
+                  will also charge upfront fees and monthly retainers. As you
+                  may expect, brokers who charge high commissions are usually
+                  more motivated to close the deal to get their share of the
+                  money.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+          <script>
+              const button = document.getElementById("showstory");
+              const paragraph = document.getElementById("story");
+
+              button.addEventListener("click", function () {
+                if (paragraph.style.display === "none") {
+                  paragraph.style.display = "block";
+                  button.textContent = "Hide Details";
+                } else {
+                  paragraph.style.display = "none";
+                  button.textContent = "Show Details";
+                }
+              });
+            </script>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  </body>
+</html>

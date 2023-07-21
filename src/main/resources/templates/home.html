@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="layouts/home" >
+
+<body>
+<div layout:fragment="content">
+    <header class="hero text-white text-center">
+        <video autoplay loop muted class="video-bg">
+            <source th:src="@{images/video.mp4}" type="video/mp4" />
+        </video>
+        <div class="container">
+            <h1 class="display-3 font-weight-bold py-5">Buy or Sell a Business</h1>
+            <p class="lead">
+                Are you an enterpreneur? Would you like to buy a business, or to sell
+                your business?<br />
+                <span class="font-weight-bold">
+            www.aabitrage.com is a certified and censored global platform that
+            you can trust!</span
+                >
+            </p>
+            <p class="text-center">AUTHENTIC ACCOUNTS  <span class="text-warning">|  APPROVED BUSINESSES</span> </p>
+            <div class="pb-5">
+                <a class="btn btn-danger mr-3 btn-lg" th:href="@{register}"
+                >Create new account</a
+                >
+                <a class="btn btn-light btn-lg pl-2 pr-2"  th:href="@{login}">Login</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div th:include="fragments/businesses::businesses" class="py-5"></div>
+    <div class="py-3 text-center">
+        <a class="btn btn-lg btn-primary" th:href="@{login}">See more businesses</a>
+    </div>
+
+
+    <section class="whyus py-5">
+        <h2 class="text-dark font-weight-bold text-center">Why trust us?</h2>
+        <div class="row">
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 m-3">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div
+                                        class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Regulated by Bank of Uganda & URA
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    Certified
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <img
+                                        th:src="@{images/certified.png}"
+                                        alt=""
+                                        class="img-fluid p-3 w-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 m-3">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div
+                                        class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Strong updated cyber security
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    Secure process
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <img
+                                        th:src="@{images/security.png}"
+                                        alt=""
+                                        class="img-fluid p-3 w-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 m-3">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div
+                                        class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    Connect with Buyers and sellers from allover the world
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    Robust Network
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <img
+                                        th:src="@{images/process.png}"
+                                        alt=""
+                                        class="img-fluid p-3 w-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card shadow h-100 m-3">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div
+                                        class="text-xs font-weight-bold text-danger text-uppercase mb-1">
+                                    All accounts and businesses are pre-approved
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                    Authentic
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <img
+                                        th:src="@{images/approved.png}"
+                                        alt=""
+                                        class="img-fluid p-3 w-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+</div>
+</body>
+</html>

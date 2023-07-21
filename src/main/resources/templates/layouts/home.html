@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arbitrage Brokerage Services Ltd</title>
+    <head>
+        <meta charset="UTF-8">
+         <title>Arbitrage Brokerage Services Ltd</title>
+        <link rel="icon" th:href="@{img/favicon.png}" type="image/x-icon" />
+
+        <link th:href="@{css/carousel.css}" rel="stylesheet"  />
+
+
+        <link th:href="@{css/sb-admin-2.min.css}" rel="stylesheet" />
+        <link th:href="@{/css/style.css}" rel="stylesheet"/>
+        <script th:src="@{js/script.js}"></script>
+        <script src="https://kit.fontawesome.com/1d323db663.js" crossorigin="anonymous"></script>
+    </head>
+</head>
+<body>
+<div th:include="fragments/nav::nav"></div>
+
+<div layout:fragment="content">
+
+</div>
+
+<div th:include="fragments/footer::footer"></div>
+<script th:src="@{vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+<!-- Core plugin JavaScript-->
+<script th:src="@{vendor/jquery-easing/jquery.easing.min.js}"></script>
+
+<!-- Custom scripts for all pages-->
+<script th:src="@{js/sb-admin-2.min.js}"></script>
+</body>
+</html>

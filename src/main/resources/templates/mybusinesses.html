@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="layouts/dashboard" >
+
+<body>
+<div layout:fragment="content">
+
+    <h3 class="text-dark p-1">My Businesses  </h3>
+    <div th:include="fragments/mybusinesses::mybusinessestable" class="py-5"></div>
+
+
+</div>
+</body>
+
+</html>

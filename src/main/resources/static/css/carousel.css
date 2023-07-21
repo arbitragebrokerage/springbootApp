@@ -1,0 +1,16 @@
+@media (min-width: 576px) {
+  .carousel .carousel-inner .active,
+  .carousel .carousel-inner .active + .carousel-item,
+  .carousel .carousel-inner .active + .carousel-item + .carousel-item,
+  .carousel
+    .carousel-inner
+    .active
+    + .carousel-item
+    + .carousel-item
+    + .carousel-item {
+    display: block;
+  }
+  .carousel .carousel-inner .carousel-item {
+    display: none;
+  }
+}

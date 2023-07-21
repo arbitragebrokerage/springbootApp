@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="layouts/form" >
+
+<body>
+<div layout:fragment="content">
+
+    <!-- Hero Section -->
+    <header class="loginbg text-white text-center">
+      <div class="container">
+        <h1 class="display-5 text-light font-weight-bold py-5">
+          Buy or Sell a Business
+        </h1>
+        <p class="pb-5 lead">Login to start</p>
+      </div>
+    </header>
+
+    <!-- Testimonials Section -->
+
+    <!-- Featured Businesses Section -->
+    <section class="testimonials py-5">
+      <div class="row text-center">
+        <div class="col-xl-4 col-md-6 mb-4 text-center"></div>
+
+        <div class="col-xl-4 col-md-6 mb-4 text-center">
+          <div class="h-100 m-3">
+            <div class="">
+              <form class="form">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  name="username"
+                  class="form-control mb-3 text-center border-bottom-dark"
+                  required />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  name="password"
+                  class="form-control mb-3 text-center border-bottom-dark"
+                  required />
+                <script th:src="@{https://cdn.jsdelivr.net/npm/sweetalert2@11}"></script>
+                <button class="btn w-50 btn-danger btn mb-5" onclick="access()">
+                  Login
+                </button>
+                <script>
+                  function access() {
+                    Swal.fire({
+                      icon: "error",
+                      title: "Access Denied",
+                      text: "You do not have permission to access.",
+                      showConfirmButton: true,
+                    });
+                  }
+                </script>
+              </form>
+              <p class="text-center py-1">
+                <a th:href="@{register}">Create new account</a>
+                <a th:href="@{user}">user dashboard</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-4 col-md-6 mb-4 text-center"></div>
+      </div>
+    </section>
+
+</div>
+  </body>
+</html>

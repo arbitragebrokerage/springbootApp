@@ -1,0 +1,109 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" th:fragment="nav">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{#}"
+        ><img th:src="@{img/logo.png}" alt="" width="200px" class="img-fluid"
+        /></a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{home}"
+                    >Home <span class="sr-only">(current)</span></a
+                    >
+                </li>
+                <li class="nav-item d-none">
+                    <a class="nav-link" th:href="@{#}">About</a>
+                </li>
+                <li class="nav-item d-none">
+                    <a class="nav-link" th:href="@{buy}">Buy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{blog}">Sell</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{services}">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" id="contact" onclick="contact()">Contact</a>
+                </li>
+            </ul>
+
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+            function contact() {
+              Swal.fire({
+                html: `
+                <div class="contactform">
+      <h2 class="gtitle">Contact Support</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="m-2 shadow">
+            <img src="images/support.png" class="img-fluid" />
+          </div>
+        </div>
+        <div class="col-md-8">
+          <p class="text-dark">
+            <a href="https://api.whatsapp.com/send?phone=+256705531101&text=Hello Arbitrage Support Team" target="_blank" class="btn btn-success" rel="noopener noreferrer">
+  <i class="fab fa-whatsapp text-light"></i> +256705531101
+</a>
+
+            <br />
+            +256 781050759 <br />
+            <a
+              href="mailto:info@aabitrage.com "
+              target="_blank"
+              class="btn btn-danger"
+              rel="noopener noreferrer">
+              <i class="fa fa-solid fa-envelope text-light"></i>
+              info@aabitrage.com
+            </a>
+          </p>
+
+          <button
+            class="btn-success d-none btn-lg m-2 btn w-50 text-center"
+            onclick="Login()">
+            <i class="fa-brands fa-whatsapp"></i>Send Whatsapp
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="my-3">
+      <h3>Send Us a Message</h3>
+      <form id="orderForm" class="my-3">
+
+                        <input type="text" id="smsname" class="input p-1 w-100" placeholder="Your Name" ><br><br>
+
+
+                        <input type="text" id="smsphone" class="input p-1 w-100" placeholder="Your Phone/ Email" >
+
+                        <textarea type="text" class="input messagearea"  id="typedmessage" wrap="soft" placeholder="Enter your message"  ></textarea>
+                      </form>
+      </div>
+        `,
+                allowOutsideClick: true,
+                allowEscapeKey: true,
+                showCloseButton: true,
+                cancelButtonText: "Cancel",
+                confirmButtonText: "Send Message",
+                showCancelButton: true,
+                showConfirmButton: true,
+                icon: "none",
+              });
+            }
+          </script>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,123 @@
+.bg-image {
+  background-image: url("images/businessman.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.activeservice {
+  text-decoration: none !important;
+  text-decoration: underline !important;
+  color: rgb(5, 122, 211) !important;
+}
+
+.inactiveservice {
+  text-decoration: none !important;
+  color: rgb(76, 76, 76) !important;
+}
+
+.serviceitem {
+  border-bottom: 1px solid #a7a7a7;
+  padding: 10px 20px !important;
+  margin-bottom: 3px !important;
+  list-style-type: none;
+}
+.serviceitem a {
+  width: 100%;
+  padding: 5px;
+}
+.serviceitem a:hover {
+  background-color: rgb(255, 243, 149) !important;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5%;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.floating-button svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.input {
+  border: 0 !important;
+  border-bottom: 1px solid #ae4141 !important;
+  border-radius: 0 !important;
+  background-color: #f0efed !important;
+}
+
+.messagearea {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100% !important;
+  padding: 10px !important;
+}
+
+.heroregister {
+  background-color: rgba(114, 0, 0, 0.8) !important;
+  background-image: url("../images/businessman.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.loginbg {
+  background-color: rgba(114, 0, 0, 0.8) !important;
+  background-image: url("../images/loginbg.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contactpic {
+  max-width: 100px !important;
+}
+
+.contactform {
+}
+
+.hero {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.8;
+  background-image: url("../images/video.mp4");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.text-dark{
+color:##262626 !important;
+}
