@@ -61,4 +61,10 @@ public class HomeController {
 
     @GetMapping("/mybusinesses")
     public String mybusinesses() {return "mybusinesses";   }
+
+    @GetMapping("/useranalytics")
+    public String useranalytics() {return "useranalytics";   }
+
+    @GetMapping("/businessdetails")
+    public String businessdetails() {return "businessdetails";   }
 }
